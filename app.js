@@ -153,3 +153,24 @@ function dragStart(e) {
   function setTranslate(xPos, yPos, el) {
     el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
   }
+
+  // show start menu on click
+  var startMenu = document.querySelector(".start")
+  var startLogo = document.querySelector(".logo")
+ 
+
+
+
+
+function classToggle() {
+    startMenu.classList.toggle("show-start");
+    startMenu.classList.toggle("hide-start");
+
+}
+
+function menuToggle() {
+    startLogo.addEventListener("click", classToggle)
+
+}
+
+menuToggle()

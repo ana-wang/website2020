@@ -28,6 +28,10 @@ header .logo {
    
 }
 
+header .logo:hover {
+    cursor:pointer;
+}
+
 header .footer {
     min-width: 200px;
     text-align:right;
@@ -81,6 +85,7 @@ text-align:center;
     touch-action: none;
     user-select: none;
     z-index:2;
+    padding:10px;
 }
 
 .show-window {
@@ -108,8 +113,8 @@ div.about{
 
     bottom:80px;
     right:60px;
-    width:500px;
-    height:350px;
+    width:340px;
+    height:420px;
 
 }
 
@@ -141,4 +146,48 @@ div.trash{
     width:500px;
     height:350px;
 
+}
+
+.minimized-bar {
+    width:80%;
+    display:flex;
+    align-items:left;
+}
+
+.minimized-bar div {
+    width: 200px;
+    padding: 7px;
+    margin:3px;
+    border:1px solid #000000;
+    background-color: pink;
+    color: #000000;
+}
+
+.minimized-bar div:hover {
+    cursor:pointer;
+}
+
+.start {
+    position: absolute;
+    bottom:50px;
+    left:0px;
+    width:200px;
+    background-color:red;
+
+}
+
+.start div {
+    height:25px;
+    border:1px solid #000000;
+    margin:2px;
+    padding:3px;
+}
+
+.show-start {
+display: block;
+
+}
+
+.hide-start{
+display:none;
 }

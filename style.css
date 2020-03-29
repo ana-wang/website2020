@@ -1,0 +1,144 @@
+
+
+
+body {
+    margin:0px;
+
+    background-color: #FCF1FF;
+    font-family: Inter;
+}
+
+header {
+    position:fixed;
+    height:50px;
+    width:100%;
+    bottom:0px;
+    background-color:#094932;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#ffffff;
+    z-index:20;
+   
+}
+
+header .logo {
+    width:50px;
+    padding:10px;
+   
+}
+
+header .footer {
+    min-width: 200px;
+    text-align:right;
+    padding:10px;
+    
+}
+
+section.desktop {
+position: absolute;
+display:flex;
+align-items: top;
+flex-direction:column;
+top: 0px;
+left:0px;
+
+width: 200px;
+padding:40px;
+
+}
+
+.desktop .desktop-icon {
+    display:flex;
+    flex-direction:column;
+width: 80px;
+height: 80px;
+/*background-color:black; */
+margin-bottom:20px;
+text-align:center;
+}
+.desktop-icon img {
+    height:60px;
+}
+
+.desktop-icon:hover{
+    cursor:pointer;
+}
+
+.windows {
+    width:100%;
+    height:100%;
+    touch-action: none;
+}
+
+.hidden {
+    border:1px solid #000000;
+    border-top:30px solid #094932;
+    position:relative;
+   display:none; 
+    position: absolute;
+    background-color:#ffffff;
+    touch-action: none;
+    user-select: none;
+    z-index:2;
+}
+
+.show-window {
+    display:block;
+}
+
+.hidden:hover{
+    cursor:pointer;
+}
+
+
+p.window-bar {
+    position:absolute;
+    top:-42px;
+    color:#ffffff;
+}
+
+p.window-close{
+    position:absolute;
+    top:-42px;
+    right:0px;
+    color:#ffffff;
+}
+div.about{
+
+    bottom:80px;
+    right:60px;
+    width:500px;
+    height:350px;
+
+}
+
+div.mood{
+    display:block;
+    bottom:90px;
+    right:140px;
+    width:500px;
+    height:350px;
+    background-image: url('images/anawang-default.gif');
+    background-size:cover;
+    background-position:center;
+    z-index:1;
+}
+
+div.projects{
+
+    top:50px;
+    left:160px;
+    width:500px;
+    height:350px;
+   
+}
+
+div.trash{
+
+    top:20px;
+    right:260px;
+    width:500px;
+    height:350px;
+
+}

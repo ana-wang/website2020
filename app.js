@@ -1,11 +1,20 @@
 // show windows on click
 
+var startAbout = document.querySelector(".start-about")
+
+// desktop icons
 var iconAbout = document.querySelector(".icon-about")
 var iconProjects = document.querySelector(".icon-projects")
 var iconTrash = document.querySelector(".icon-trash")
+var iconDocuments = document.querySelector(".icon-documents")
+
+// desktop windows
 var windowAbout = document.querySelector(".about")
 var windowProjects = document.querySelector(".projects")
 var windowTrash = document.querySelector(".trash")
+var windowMood =  document.querySelector(".mood")
+var windowDocuments = document.querySelector(".documents")
+
 
 
 var desktopIcon = document.querySelector(".desktop-icon")
@@ -14,59 +23,100 @@ var desktopWindow = document.querySelectorAll(".hidden")
 
 function showWindow() {
 
-
-    iconAbout.addEventListener("click", function(){
-        windowAbout.classList.add("show-window");
+    startAbout.addEventListener("click", function(){
+        windowAbout.classList.toggle("show-window");
+        windowAbout.classList.toggle("hide-window");
         windowAbout.style.zIndex = 3;
         windowProjects.style.zIndex = 2;
         windowTrash.style.zIndex = 2;
-       windowAbout.style.display = "block";
+    })
+
+    iconAbout.addEventListener("click", function(){
+        windowAbout.classList.toggle("show-window");
+        windowAbout.classList.toggle("hide-window");
+        windowAbout.style.zIndex = 3;
+        windowProjects.style.zIndex = 2;
+        windowTrash.style.zIndex = 2;
+       
+       
 
     })
     iconProjects.addEventListener("click", function(){
-        windowProjects.classList.add("show-window");
+        windowProjects.classList.toggle("show-window");
+        windowProjects.classList.toggle("hide-window");
         windowAbout.style.zIndex = 2;
         windowProjects.style.zIndex = 3;
         windowTrash.style.zIndex = 2;
-        windowProjects.style.display = "block";
+      
 
     })
     iconTrash.addEventListener("click", function(){
-        windowTrash.classList.add("show-window");
+        windowTrash.classList.toggle("show-window");
+        windowTrash.classList.toggle("hide-window");
         windowAbout.style.zIndex = 2;
         windowProjects.style.zIndex = 2;
         windowTrash.style.zIndex = 3;
-        windowTrash.style.display = "block";
+      
     })
-
-
+    iconDocuments.addEventListener("click", function(){
+        windowDocuments.classList.toggle("show-window");
+        windowDocuments.classList.toggle("hide-window");
+        windowAbout.style.zIndex = 2;
+        windowProjects.style.zIndex = 2;
+        windowTrash.style.zIndex = 2;
+        windowDocuments.style.zIndex = 3;
+      
+    })
 }
 
 
 showWindow();
 
-desktopWindow.forEach((window, index) => {
-    const onewindow = desktopWindow[index];
-    windowClose.forEach((windowexit, index) => {
-        windowexit.addEventListener('click', () => {
-           onewindow.style.display = 'none';
-        
+// hide window on x button
 
-    });
-    });
-  
+var aboutX = document.querySelector(".about .window-close")
+var moodX = document.querySelector(".mood .window-close")
+var projectsX = document.querySelector(".projects .window-close")
+var trashX = document.querySelector(".trash .window-close")
+var documentsX = document.querySelector(".documents .window-close")
 
-  });
+function exitAbout() {
+    aboutX.addEventListener("click", function(){
+        windowAbout.classList.remove("show-window");
+        windowAbout.classList.add("hide-window");
+    })
+}
+function exitProjects() {
+    projectsX.addEventListener("click", function(){
+        windowProjects.classList.remove("show-window");
+        windowProjects.classList.add("hide-window");
+    })
+}
+function exitTrash() {
+    trashX.addEventListener("click", function(){
+        windowTrash.classList.remove("show-window");
+        windowTrash.classList.add("hide-window");
+    })
+}
+function exitMood() {
+    moodX.addEventListener("click", function(){
+        windowMood.classList.remove("show-window");
+        windowMood.classList.add("hide-window");
+    })
+}
 
- 
+function exitDocuments() {
+    documentsX.addEventListener("click", function(){
+        windowDocuments.classList.remove("show-window");
+        windowDocuments.classList.add("hide-window");
+    })
+}
 
-//function closeWindow() {
-//    windowClose.addEventListener("click", function(){
- //  desktopWindow.style.display = "none";
-//})
-//}
-
-//closeWindow();
+exitAbout()
+exitProjects()
+exitTrash()
+exitMood()
+exitDocuments()
 
 
 // draggable windows
@@ -159,9 +209,6 @@ function dragStart(e) {
   var startLogo = document.querySelector(".logo")
  
 
-
-
-
 function classToggle() {
     startMenu.classList.toggle("show-start");
     startMenu.classList.toggle("hide-start");
@@ -169,8 +216,137 @@ function classToggle() {
 }
 
 function menuToggle() {
-    startLogo.addEventListener("click", classToggle)
+    startLogo.addEventListener("click", function(){
+        classToggle()
+        startSettingsMenu.classList.remove("show-start")
+        startSettingsMenu.classList.add("hide-start")
+        startRecentMenu.classList.remove("show-start");
+        startRecentMenu.classList.add("hide-start");
+    })
 
 }
 
 menuToggle()
+
+// show settings start menu on click 
+
+var startSettingsMenu = document.querySelector(".start-settings-menu")
+var startSettingsLogo = document.querySelector(".start-settings")
+var startRecentMenu = document.querySelector(".start-recent-menu")
+var startRecentLogo = document.querySelector(".start-recent")
+
+function settingsClassToggle() {
+    startSettingsMenu.classList.toggle("show-start");
+    startSettingsMenu.classList.toggle("hide-start");
+    
+  
+}
+
+function settingsMenuToggle() {
+    startSettingsLogo.addEventListener("click", function(){
+        settingsClassToggle();
+        startRecentMenu.classList.remove("show-start");
+        startRecentMenu.classList.add("hide-start");
+       
+    })
+    
+}
+
+settingsMenuToggle()
+
+function recentClassToggle() {
+    startRecentMenu.classList.toggle("show-start");
+    startRecentMenu.classList.toggle("hide-start");
+  
+
+}
+
+function recentMenuToggle() {
+    startRecentLogo.addEventListener("click", function(){
+        recentClassToggle();
+        startSettingsMenu.classList.remove("show-start")
+        startSettingsMenu.classList.add("hide-start")
+       
+    } )
+  
+}
+
+recentMenuToggle()
+
+
+
+// open windows from minimized menu bar
+
+var menuAbout = document.querySelector(".min-about")
+var menuProjects = document.querySelector(".min-projects")
+var menuTrash = document.querySelector(".min-trash")
+
+function openMinimized() {
+    menuAbout.addEventListener("click", function(){
+        windowAbout.classList.add("show-window");
+        windowAbout.style.zIndex = 3;
+        windowProjects.style.zIndex = 2;
+        windowTrash.style.zIndex = 2;
+      
+
+    })
+    menuProjects.addEventListener("click", function(){
+        windowProjects.classList.add("show-window");
+        windowAbout.style.zIndex = 2;
+        windowProjects.style.zIndex = 3;
+        windowTrash.style.zIndex = 2;
+    
+    
+    })
+    menuTrash.addEventListener("click", function(){
+        windowTrash.classList.add("show-window");
+        windowAbout.style.zIndex = 2;
+        windowProjects.style.zIndex = 2;
+        windowTrash.style.zIndex = 3;
+        
+    
+    })
+}
+
+openMinimized()
+
+// toggle open windows closed if clicked again
+
+function openAndCloseAbout() {
+    windowAbout.classList.toggle("show-window");
+    windowAbout.classList.toggle("hide-window");
+   }
+function openAndCloseProjects() {
+    
+    windowProjects.classList.toggle("show-window");
+    windowProjects.classList.toggle("hide-window");
+   }
+function openAndCloseTrash() {
+    windowTrash.classList.toggle("show-window");
+    windowTrash.classList.toggle("hide-window");
+   }
+
+function minToggle() {
+    menuAbout.addEventListener("click", openAndCloseAbout)
+    menuProjects.addEventListener("click", openAndCloseProjects)
+    menuTrash.addEventListener("click", openAndCloseTrash)
+ }
+
+minToggle()
+
+
+// maximize background
+
+var makeThisBig = document.querySelector("p.max-bg")
+var bodyBg = document.querySelector("body")
+
+function makeBgBig() {
+    makeThisBig.addEventListener("click", function(){
+        bodyBg.style.backgroundImage = "url('images/anawang-default.gif')";
+        bodyBg.style.backgroundSize = "cover";
+        windowMood.classList.remove("show-window");
+        windowMood.classList.add("hide-window");
+    })
+}
+
+makeBgBig();

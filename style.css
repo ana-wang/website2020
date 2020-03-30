@@ -6,6 +6,8 @@ body {
 
     background-color: #FCF1FF;
     font-family: Inter;
+    overflow:hidden;
+  
 }
 
 header {
@@ -23,9 +25,24 @@ header {
 }
 
 header .logo {
-    width:50px;
+    width:150px;
     padding:10px;
+   display:flex;
+   height:40px;
+   align-items:center;
    
+}
+
+header .logo img {
+    width:40px;
+    
+}
+
+header .logo p {
+    width: 100px;
+    font-size:24px;
+    font-weight:600;
+    text-transform:uppercase;
 }
 
 header .logo:hover {
@@ -79,7 +96,7 @@ text-align:center;
     border:1px solid #000000;
     border-top:30px solid #094932;
     position:relative;
-   display:none; 
+
     position: absolute;
     background-color:#ffffff;
     touch-action: none;
@@ -92,9 +109,11 @@ text-align:center;
     display:block;
 }
 
-.hidden:hover{
-    cursor:pointer;
+.hide-window {
+    display:none;
 }
+
+
 
 
 p.window-bar {
@@ -119,7 +138,7 @@ div.about{
 }
 
 div.mood{
-    display:block;
+    
     bottom:90px;
     right:140px;
     width:500px;
@@ -148,6 +167,49 @@ div.trash{
 
 }
 
+div.documents {
+    top:20px;
+    right:260px;
+    width:500px;
+    height:350px;
+    overflow:hidden;
+}
+
+.documents-container {
+    display:flex;
+   
+    width:100%;
+
+}
+
+.documents-container .emails-left {
+    width:30%;
+    display:flex;
+    flex-direction:column;
+}
+.documents-container .emails-right {
+ border:1px solid #000000;
+ width:60%;
+}
+
+.emails-left p {
+    opacity: 0.3;
+}
+
+.emails-left p.highlighted {
+    opacity:1;
+}
+
+.emails-right div {
+    border:1px solid #000000;
+    margin:3px;
+    padding:14px;
+}
+
+.date {
+    opacity:0.4;
+    font-size:10px;
+}
 .minimized-bar {
     width:80%;
     display:flex;
@@ -159,12 +221,13 @@ div.trash{
     padding: 7px;
     margin:3px;
     border:1px solid #000000;
-    background-color: pink;
+    background-color: #A3E2BA;
     color: #000000;
 }
 
 .minimized-bar div:hover {
     cursor:pointer;
+    opacity:0.3;
 }
 
 .start {
@@ -172,7 +235,8 @@ div.trash{
     bottom:50px;
     left:0px;
     width:200px;
-    background-color:red;
+    background-color:#094932;
+    color:#ffffff;
 
 }
 
@@ -183,6 +247,15 @@ div.trash{
     padding:3px;
 }
 
+.start-row {
+    color:#ffffff;
+}
+
+.start-row:hover {
+    cursor:pointer;
+    opacity:0.5;
+    background-color: pink;
+}
 .show-start {
 display: block;
 
@@ -190,4 +263,59 @@ display: block;
 
 .hide-start{
 display:none;
+}
+
+.start-row-secondary {
+    left:200px;
+    width:350px;
+    position: absolute;
+    background-color:#094932;
+}
+
+.start-settings-menu {
+    bottom:85px;
+}
+
+.start-settings-menu div {
+    height:25px;
+    border:1px solid #000000;
+    margin:2px;
+    padding:3px;
+}
+
+.start-recent-menu {
+      bottom:120px;
+ 
+}
+
+.start-recent-menu div {
+    height:25px;
+    border:1px solid #000000;
+    margin:2px;
+    padding:3px;
+}
+
+.max-bg {
+    background-color:red;
+  
+}
+.max-bg:hover {
+    cursor:pointer;
+}
+
+.project-list {
+    display:flex;
+    max-width: 100%;
+    flex-wrap:wrap;
+}
+
+.single-project {
+    width:90px;
+}
+.single-project img {
+    width: 90px;
+}
+
+.single-project p{
+    text-align:center;
 }

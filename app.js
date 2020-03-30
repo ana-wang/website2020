@@ -3,17 +3,19 @@
 var startAbout = document.querySelector(".start-about")
 
 // desktop icons
-var iconAbout = document.querySelector(".icon-about")
-var iconProjects = document.querySelector(".icon-projects")
+//var iconAbout = document.querySelector(".icon-about")
+var iconImages = document.querySelector(".icon-images")
 var iconTrash = document.querySelector(".icon-trash")
 var iconDocuments = document.querySelector(".icon-documents")
+var iconEmails = document.querySelector(".icon-emails")
 
 // desktop windows
 var windowAbout = document.querySelector(".about")
-var windowProjects = document.querySelector(".projects")
+var windowImages = document.querySelector(".images")
 var windowTrash = document.querySelector(".trash")
 var windowMood =  document.querySelector(".mood")
 var windowDocuments = document.querySelector(".documents")
+var windowEmails = document.querySelector(".emails")
 
 
 
@@ -27,26 +29,27 @@ function showWindow() {
         windowAbout.classList.toggle("show-window");
         windowAbout.classList.toggle("hide-window");
         windowAbout.style.zIndex = 3;
-        windowProjects.style.zIndex = 2;
+        windowImages.style.zIndex = 2;
         windowTrash.style.zIndex = 2;
     })
 
-    iconAbout.addEventListener("click", function(){
-        windowAbout.classList.toggle("show-window");
-        windowAbout.classList.toggle("hide-window");
-        windowAbout.style.zIndex = 3;
-        windowProjects.style.zIndex = 2;
-        windowTrash.style.zIndex = 2;
+  //  iconAbout.addEventListener("click", function(){
+    //    windowAbout.classList.toggle("show-window");
+      //  windowAbout.classList.toggle("hide-window");
+       // windowAbout.style.zIndex = 3;
+        //windowProjects.style.zIndex = 2;
+        //windowTrash.style.zIndex = 2;
        
        
 
-    })
-    iconProjects.addEventListener("click", function(){
-        windowProjects.classList.toggle("show-window");
-        windowProjects.classList.toggle("hide-window");
+ //   })
+    iconImages.addEventListener("click", function(){
+        windowImages.classList.toggle("show-window");
+        windowImages.classList.toggle("hide-window");
         windowAbout.style.zIndex = 2;
-        windowProjects.style.zIndex = 3;
+        windowDocuments.style.zIndex = 2;
         windowTrash.style.zIndex = 2;
+        windowImages.style.zIndex = 3;
       
 
     })
@@ -54,7 +57,8 @@ function showWindow() {
         windowTrash.classList.toggle("show-window");
         windowTrash.classList.toggle("hide-window");
         windowAbout.style.zIndex = 2;
-        windowProjects.style.zIndex = 2;
+        windowImages.style.zIndex = 2;
+        windowDocuments.style.zIndex = 2;
         windowTrash.style.zIndex = 3;
       
     })
@@ -62,10 +66,22 @@ function showWindow() {
         windowDocuments.classList.toggle("show-window");
         windowDocuments.classList.toggle("hide-window");
         windowAbout.style.zIndex = 2;
-        windowProjects.style.zIndex = 2;
+        windowImages.style.zIndex = 2;
         windowTrash.style.zIndex = 2;
+        windowEmails.style.zIndex = 2;
         windowDocuments.style.zIndex = 3;
       
+    })
+
+    iconEmails.addEventListener("click", function(){
+        windowEmails.classList.toggle("show-window");
+        windowEmails.classList.toggle("hide-window");
+        windowAbout.style.zIndex = 2;
+        windowImages.style.zIndex = 2;
+        windowTrash.style.zIndex = 2;
+        windowDocuments.style.zIndex = 2;
+        windowEmails.style.zIndex = 3;
+
     })
 }
 
@@ -76,9 +92,10 @@ showWindow();
 
 var aboutX = document.querySelector(".about .window-close")
 var moodX = document.querySelector(".mood .window-close")
-var projectsX = document.querySelector(".projects .window-close")
+var imagesX = document.querySelector(".images .window-close")
 var trashX = document.querySelector(".trash .window-close")
 var documentsX = document.querySelector(".documents .window-close")
+var emailsX = document.querySelector(".emails .window-close")
 
 function exitAbout() {
     aboutX.addEventListener("click", function(){
@@ -86,10 +103,16 @@ function exitAbout() {
         windowAbout.classList.add("hide-window");
     })
 }
-function exitProjects() {
-    projectsX.addEventListener("click", function(){
-        windowProjects.classList.remove("show-window");
-        windowProjects.classList.add("hide-window");
+function exitDocuments() {
+    documentsX.addEventListener("click", function(){
+        windowDocuments.classList.remove("show-window");
+        windowDocuments.classList.add("hide-window");
+    })
+}
+function exitImages() {
+    imagesX.addEventListener("click", function(){
+        windowImages.classList.remove("show-window");
+        windowImages.classList.add("hide-window");
     })
 }
 function exitTrash() {
@@ -105,19 +128,22 @@ function exitMood() {
     })
 }
 
-function exitDocuments() {
-    documentsX.addEventListener("click", function(){
-        windowDocuments.classList.remove("show-window");
-        windowDocuments.classList.add("hide-window");
+
+
+function exitEmails() {
+    emailsX.addEventListener("click", function(){
+        windowEmails.classList.remove("show-window");
+        windowEmails.classList.add("hide-window");
     })
 }
 
 exitAbout()
-exitProjects()
+exitImages()
+exitDocuments()
 exitTrash()
 exitMood()
-exitDocuments()
 
+exitEmails()
 
 // draggable windows
 
@@ -337,7 +363,9 @@ minToggle()
 
 // maximize background
 
-var makeThisBig = document.querySelector("p.max-bg")
+var makeThisBig = document.querySelector("div.max-bg span.ok")
+var closeMakeThisBig = document.querySelector("div.max-bg span.cancel")
+var boxMakeThisBig = document.querySelector("div.max-bg")
 var bodyBg = document.querySelector("body")
 
 function makeBgBig() {
@@ -349,4 +377,11 @@ function makeBgBig() {
     })
 }
 
+function closeBigBox() {
+    closeMakeThisBig.addEventListener("click", function(){
+        boxMakeThisBig.style.display = "none";
+    })
+}
+
 makeBgBig();
+closeBigBox();

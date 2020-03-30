@@ -7,6 +7,7 @@ body {
     background-color: #FCF1FF;
     font-family: Inter;
     overflow:hidden;
+    font-size:16px;
   
 }
 
@@ -103,6 +104,7 @@ text-align:center;
     user-select: none;
     z-index:2;
     padding:10px;
+    box-shadow: 8px 10px rgba(0,0,0,0.3);
 }
 
 .show-window {
@@ -134,7 +136,12 @@ div.about{
     right:60px;
     width:340px;
     height:420px;
+    font-size:12px;
+    text-align:center;
+}
 
+div.about p.window-bar {
+    font-size:16px;
 }
 
 div.mood{
@@ -149,30 +156,44 @@ div.mood{
     z-index:1;
 }
 
-div.projects{
+div.emails{
 
     top:50px;
     left:160px;
     width:500px;
-    height:350px;
+    
    
 }
+
+
+div.images{
+
+   /*     top:150px;
+        right:160px;
+        width:500px;*/
+        width:85%;
+        height:70%;
+        top:30px;
+        left:50px;
+        
+       
+    }
 
 div.trash{
 
     top:20px;
-    right:260px;
+    right:360px;
     width:500px;
     height:350px;
 
 }
 
 div.documents {
-    top:20px;
+    top:120px;
     right:260px;
     width:500px;
     height:350px;
-    overflow:hidden;
+ 
 }
 
 .documents-container {
@@ -254,7 +275,8 @@ div.documents {
 .start-row:hover {
     cursor:pointer;
     opacity:0.5;
-    background-color: pink;
+    background-color: #ffffff;
+    color:#094932;
 }
 .show-start {
 display: block;
@@ -267,7 +289,7 @@ display:none;
 
 .start-row-secondary {
     left:200px;
-    width:350px;
+    width:500px;
     position: absolute;
     background-color:#094932;
 }
@@ -296,11 +318,25 @@ display:none;
 }
 
 .max-bg {
-    background-color:red;
+    text-align:center;
+    max-width:300px;
+    border:1px solid #000000;
+    margin: 60px auto;
+    padding:60px 30px;
+ background-color: rgba(255, 255, 255, 0.8);
   
 }
-.max-bg:hover {
+
+.max-bg span {
+    border:1px solid #000000;
+    padding:8px 20px;
+    margin-top:60px;
+    margin-right:6px;
+    margin-left:6px;
+}
+.max-bg span:hover {
     cursor:pointer;
+    background-color: #094932;
 }
 
 .project-list {

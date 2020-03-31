@@ -102,7 +102,7 @@ text-align:center;
     background-color:#ffffff;
     touch-action: none;
     user-select: none;
-    z-index:2;
+ 
     padding:10px;
     box-shadow: 8px 10px rgba(0,0,0,0.3);
 }
@@ -258,7 +258,7 @@ div.documents {
     width:200px;
     background-color:#094932;
     color:#ffffff;
-
+z-index: 5;
 }
 
 .start div {
@@ -288,6 +288,7 @@ display:none;
 }
 
 .start-row-secondary {
+    z-index:5;
     left:200px;
     width:500px;
     position: absolute;
@@ -354,4 +355,32 @@ display:none;
 
 .single-project p{
     text-align:center;
+}
+
+
+.help {
+    position:absolute;
+   top:30%;
+   left:300px;
+    text-align:center;
+    width:300px;
+    border:1px solid #000000;
+margin: 60px 300px;
+padding:60px 30px;
+ background-color: rgba(255, 255, 255, 0.8);
+ z-index:20;
+ display:none;
+}
+
+.help span{
+    border:1px solid #000000;
+    padding:8px 20px;
+    margin-top:60px;
+    margin-right:6px;
+    margin-left:6px;
+}
+
+.help span:hover {
+    cursor:pointer;
+    background-color: #094932;
 }

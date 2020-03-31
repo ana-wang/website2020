@@ -10,6 +10,7 @@ var iconDocuments = document.querySelector(".icon-documents")
 var iconEmails = document.querySelector(".icon-emails")
 
 // desktop windows
+var allWindows = document.querySelector(".hidden")
 var windowAbout = document.querySelector(".about")
 var windowImages = document.querySelector(".images")
 var windowTrash = document.querySelector(".trash")
@@ -49,6 +50,8 @@ function showWindow() {
         windowAbout.style.zIndex = 2;
         windowDocuments.style.zIndex = 2;
         windowTrash.style.zIndex = 2;
+        windowMood.style.zIndex = 2;
+        windowEmails.style.zIndex = 2;
         windowImages.style.zIndex = 3;
       
 
@@ -142,7 +145,6 @@ exitImages()
 exitDocuments()
 exitTrash()
 exitMood()
-
 exitEmails()
 
 // draggable windows
@@ -260,6 +262,7 @@ var startSettingsMenu = document.querySelector(".start-settings-menu")
 var startSettingsLogo = document.querySelector(".start-settings")
 var startRecentMenu = document.querySelector(".start-recent-menu")
 var startRecentLogo = document.querySelector(".start-recent")
+var startHelpBox = document.querySelector(".start-help")
 
 function settingsClassToggle() {
     startSettingsMenu.classList.toggle("show-start");
@@ -299,37 +302,52 @@ function recentMenuToggle() {
 
 recentMenuToggle()
 
+function openHelpBox() {
+    startHelpBox.addEventListener("click", function(){
+        boxEmailAna.style.display = "block";
+    })
+}
+
+openHelpBox();
 
 
 // open windows from minimized menu bar
 
 var menuAbout = document.querySelector(".min-about")
-var menuProjects = document.querySelector(".min-projects")
-var menuTrash = document.querySelector(".min-trash")
+var menuDocuments = document.querySelector(".min-documents")
+var menuImages = document.querySelector(".min-images")
 
 function openMinimized() {
     menuAbout.addEventListener("click", function(){
         windowAbout.classList.add("show-window");
         windowAbout.style.zIndex = 3;
-        windowProjects.style.zIndex = 2;
+        windowDocuments.style.zIndex = 2;
+        windowImages.style.zIndex = 2;
         windowTrash.style.zIndex = 2;
+        windowMood.style.zIndex = 2;
+        windowEmails.style.zIndex = 2;
       
 
     })
-    menuProjects.addEventListener("click", function(){
-        windowProjects.classList.add("show-window");
+    menuDocuments.addEventListener("click", function(){
+        windowDocuments.classList.add("show-window");
         windowAbout.style.zIndex = 2;
-        windowProjects.style.zIndex = 3;
+        windowDocuments.style.zIndex = 3;
+        windowImages.style.zIndex = 2;
         windowTrash.style.zIndex = 2;
+        windowMood.style.zIndex = 2;
+        windowEmails.style.zIndex = 2;
     
     
     })
-    menuTrash.addEventListener("click", function(){
-        windowTrash.classList.add("show-window");
+    menuImages.addEventListener("click", function(){
+        windowImages.classList.add("show-window");
         windowAbout.style.zIndex = 2;
-        windowProjects.style.zIndex = 2;
-        windowTrash.style.zIndex = 3;
-        
+        windowDocuments.style.zIndex = 2;
+        windowImages.style.zIndex = 3;
+        windowTrash.style.zIndex = 2;
+        windowMood.style.zIndex = 2;
+        windowEmails.style.zIndex = 2;
     
     })
 }
@@ -342,20 +360,20 @@ function openAndCloseAbout() {
     windowAbout.classList.toggle("show-window");
     windowAbout.classList.toggle("hide-window");
    }
-function openAndCloseProjects() {
+function openAndCloseDocuments() {
     
-    windowProjects.classList.toggle("show-window");
-    windowProjects.classList.toggle("hide-window");
+    windowDocuments.classList.toggle("show-window");
+    windowDocuments.classList.toggle("hide-window");
    }
-function openAndCloseTrash() {
-    windowTrash.classList.toggle("show-window");
-    windowTrash.classList.toggle("hide-window");
+function openAndCloseImages() {
+    windowImages.classList.toggle("show-window");
+    windowImages.classList.toggle("hide-window");
    }
 
 function minToggle() {
     menuAbout.addEventListener("click", openAndCloseAbout)
-    menuProjects.addEventListener("click", openAndCloseProjects)
-    menuTrash.addEventListener("click", openAndCloseTrash)
+    menuDocuments.addEventListener("click", openAndCloseDocuments)
+    menuImages.addEventListener("click", openAndCloseImages)
  }
 
 minToggle()
@@ -385,3 +403,87 @@ function closeBigBox() {
 
 makeBgBig();
 closeBigBox();
+
+// Help alert
+
+var emailAna = document.querySelector("section.help span.ok")
+var closeEmailAna = document.querySelector("section.help span.cancel")
+var boxEmailAna = document.querySelector("section.help")
+
+function letsEmailAna() {
+    emailAna.addEventListener("click", function(){
+        window.open('mailto:ana@anawang.com?subject=Hello');
+    })
+}
+
+function closeEmailAnaBox() {
+    closeEmailAna.addEventListener("click", function(){
+        boxEmailAna.style.display = "none";
+    })
+}
+letsEmailAna();
+closeEmailAnaBox();
+
+// bring active window to front
+
+function aboutToFront(){windowAbout.addEventListener("mousedown", function(){
+    windowImages.style.zIndex = "2";
+    windowDocuments.style.zIndex = "2";
+    windowEmails.style.zIndex = "2";
+    windowMood.style.zIndex = "2";
+    windowTrash.style.zIndex = "2";
+    windowAbout.style.zIndex = "3";
+  
+})
+}
+
+function documentsToFront(){windowDocuments.addEventListener("mousedown", function(){
+    windowImages.style.zIndex = "2";
+    windowDocuments.style.zIndex = "3";
+    windowEmails.style.zIndex = "2";
+    windowMood.style.zIndex = "2";
+    windowTrash.style.zIndex = "2";
+    windowAbout.style.zIndex = "2";
+})
+}
+
+function imagesToFront(){windowImages.addEventListener("mousedown", function(){
+    windowImages.style.zIndex = "3";
+    windowDocuments.style.zIndex = "2";
+    windowEmails.style.zIndex = "2";
+    windowMood.style.zIndex = "2";
+    windowTrash.style.zIndex = "2";
+    windowAbout.style.zIndex = "2";
+})
+}
+
+function moodToFront(){windowMood.addEventListener("mousedown", function(){
+    windowMood.style.zIndex = "3";
+})
+}
+
+function emailsToFront(){windowEmails.addEventListener("mousedown", function(){
+    windowImages.style.zIndex = "2";
+    windowDocuments.style.zIndex = "2";
+    windowEmails.style.zIndex = "3";
+    windowMood.style.zIndex = "2";
+    windowTrash.style.zIndex = "2";
+    windowAbout.style.zIndex = "2";
+})
+}
+function trashToFront(){windowTrash.addEventListener("mousedown", function(){
+    windowImages.style.zIndex = "2";
+    windowDocuments.style.zIndex = "2";
+    windowEmails.style.zIndex = "2";
+    windowMood.style.zIndex = "2";
+    windowTrash.style.zIndex = "3";
+    windowAbout.style.zIndex = "2";
+})
+}
+
+aboutToFront()
+documentsToFront()
+imagesToFront()
+moodToFront()
+emailsToFront()
+trashToFront()

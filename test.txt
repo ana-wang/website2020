@@ -1,21 +1,9 @@
-// this is a test page
+// 
 
 
-desktopWindow.forEach((window, index) => {
-    const oneWindow = desktopWindow[index];
-    windowClose.forEach((windowexit, index) => {
-        windowexit.addEventListener('click', () => {
-           oneWindow.style.display = 'none';
 
-    });
-    });
-  
-
-  });
 
 To do:
   - remove draggable elements within each window
   - projects page: style folders
-  - email icon: goes to an inbox with last sent messages from newsletter + signup
-- add logo or icon to start menu 
-- maximize mood as background
+

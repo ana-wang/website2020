@@ -99,6 +99,7 @@ var imagesX = document.querySelector(".images .window-close")
 var trashX = document.querySelector(".trash .window-close")
 var documentsX = document.querySelector(".documents .window-close")
 var emailsX = document.querySelector(".emails .window-close")
+var helpX = document.querySelector(".help .window-close")
 
 function exitAbout() {
     aboutX.addEventListener("click", function(){
@@ -130,6 +131,11 @@ function exitMood() {
         windowMood.classList.add("hide-window");
     })
 }
+function exitHelp() {
+    helpX.addEventListener("click", function(){
+        boxEmailAna.style.display = "none";
+    })
+}
 
 
 
@@ -146,6 +152,7 @@ exitDocuments()
 exitTrash()
 exitMood()
 exitEmails()
+exitHelp()
 
 // draggable windows
 

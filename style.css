@@ -74,10 +74,15 @@ padding:40px;
     display:flex;
     flex-direction:column;
 width: 80px;
-height: 80px;
+height: 95px;
 /*background-color:black; */
 margin-bottom:20px;
 text-align:center;
+}
+
+.desktop-icon p {
+    font-size:11px;
+    text-transform:uppercase;
 }
 .desktop-icon img {
     height:60px;
@@ -85,6 +90,26 @@ text-align:center;
 
 .desktop-icon:hover{
     cursor:pointer;
+}
+.folder-tab {
+    position:absolute;
+    width:30px;
+    margin-top:-6px;
+    margin-left:50px;
+    height:6px;
+    background-color:#094932;
+}
+.folder {
+  
+    text-align:center;
+    width:80px;
+    height:180px;
+  background-color:#094932;
+
+}
+.folder:hover {
+    background-image:url(images/anawang_logo.svg);
+    background-size:cover;
 }
 
 .windows {
@@ -366,16 +391,19 @@ display:none;
     width:300px;
     border:1px solid #000000;
 margin: 60px 300px;
-padding:60px 30px;
- background-color: rgba(255, 255, 255, 0.8);
+padding:40px 5px;
+ background-color: rgba(255, 255, 255, 0.9);
  z-index:20;
  display:none;
+ box-shadow: 8px 10px rgba(0,0,0,0.3);
+ border-top:30px solid #094932;
+
 }
 
 .help span{
     border:1px solid #000000;
     padding:8px 20px;
-    margin-top:60px;
+    margin-top:0px;
     margin-right:6px;
     margin-left:6px;
 }
@@ -383,4 +411,10 @@ padding:60px 30px;
 .help span:hover {
     cursor:pointer;
     background-color: #094932;
+ 
 }
+
+.window-close:hover {
+    cursor:pointer;
+}
+

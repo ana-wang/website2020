@@ -149,6 +149,11 @@ text-align:center;
     box-shadow: 8px 10px rgba(0,0,0,0.3);
 }
 
+.hidden p, .hidden div {
+    
+    transform:none !important;  
+}
+
 .show-window {
     display:block;
 }
@@ -164,13 +169,19 @@ p.window-bar {
     position:absolute;
     top:-42px;
     color:#ffffff;
+  transform:none !important;  
+
+    
 }
+
+
 
 p.window-close{
     position:absolute;
     top:-42px;
     right:0px;
-    color:#ffffff;
+      color:#ffffff;
+  transform:none !important;  
 }
 div.about{
 

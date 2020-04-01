@@ -1,6 +1,8 @@
 // show windows on click
 
 var startAbout = document.querySelector(".start-about")
+var startGoodbye = document.querySelector(".start-goodbye")
+var startHelpBox = document.querySelector(".start-help")
 
 // desktop icons
 //var iconAbout = document.querySelector(".icon-about")
@@ -17,21 +19,27 @@ var windowTrash = document.querySelector(".trash")
 var windowMood =  document.querySelector(".mood")
 var windowDocuments = document.querySelector(".documents")
 var windowEmails = document.querySelector(".emails")
-
-
+var boxGoodbye = document.querySelector(".goodbye")
+var boxEmailAna = document.querySelector("section.help")
 
 var desktopIcon = document.querySelector(".desktop-icon")
 var windowClose = document.querySelectorAll(".window-close")
 var desktopWindow = document.querySelectorAll(".hidden")
+
 
 function showWindow() {
 
     startAbout.addEventListener("click", function(){
         windowAbout.classList.toggle("show-window");
         windowAbout.classList.toggle("hide-window");
+        windowMood.style.zIndex = 2;
         windowAbout.style.zIndex = 3;
+        windowDocuments.style.zIndex = 2;
         windowImages.style.zIndex = 2;
         windowTrash.style.zIndex = 2;
+        windowEmails.style.zIndex = 2;
+        boxEmailAna.style.zIndex = 2;
+        boxGoodbye.style.zIndex = 2;
     })
 
   //  iconAbout.addEventListener("click", function(){
@@ -47,45 +55,78 @@ function showWindow() {
     iconImages.addEventListener("click", function(){
         windowImages.classList.toggle("show-window");
         windowImages.classList.toggle("hide-window");
+        windowMood.style.zIndex = 2;
         windowAbout.style.zIndex = 2;
         windowDocuments.style.zIndex = 2;
-        windowTrash.style.zIndex = 2;
-        windowMood.style.zIndex = 2;
-        windowEmails.style.zIndex = 2;
         windowImages.style.zIndex = 3;
+        windowTrash.style.zIndex = 2;
+        windowEmails.style.zIndex = 2;
+        boxEmailAna.style.zIndex = 2;
+        boxGoodbye.style.zIndex = 2;
       
 
     })
     iconTrash.addEventListener("click", function(){
         windowTrash.classList.toggle("show-window");
         windowTrash.classList.toggle("hide-window");
+        windowMood.style.zIndex = 2;
         windowAbout.style.zIndex = 2;
-        windowImages.style.zIndex = 2;
         windowDocuments.style.zIndex = 2;
+        windowImages.style.zIndex = 2;
         windowTrash.style.zIndex = 3;
+        windowEmails.style.zIndex = 2;
+        boxEmailAna.style.zIndex = 2;
+        boxGoodbye.style.zIndex = 2;
       
     })
     iconDocuments.addEventListener("click", function(){
         windowDocuments.classList.toggle("show-window");
         windowDocuments.classList.toggle("hide-window");
+        windowMood.style.zIndex = 2;
         windowAbout.style.zIndex = 2;
+        windowDocuments.style.zIndex = 3;
         windowImages.style.zIndex = 2;
         windowTrash.style.zIndex = 2;
         windowEmails.style.zIndex = 2;
-        windowDocuments.style.zIndex = 3;
+        boxEmailAna.style.zIndex = 2;
+        boxGoodbye.style.zIndex = 2;
       
     })
 
     iconEmails.addEventListener("click", function(){
         windowEmails.classList.toggle("show-window");
         windowEmails.classList.toggle("hide-window");
+        windowMood.style.zIndex = 2;
         windowAbout.style.zIndex = 2;
+        windowDocuments.style.zIndex = 2;
         windowImages.style.zIndex = 2;
         windowTrash.style.zIndex = 2;
-        windowDocuments.style.zIndex = 2;
         windowEmails.style.zIndex = 3;
+        boxEmailAna.style.zIndex = 2;
+        boxGoodbye.style.zIndex = 2;
 
     })
+    startGoodbye.addEventListener("click", function(){
+        windowMood.style.zIndex = 2;
+        windowAbout.style.zIndex = 2;
+        windowDocuments.style.zIndex = 2;
+        windowImages.style.zIndex = 2;
+        windowTrash.style.zIndex = 2;
+        windowEmails.style.zIndex = 2;
+        boxEmailAna.style.zIndex = 2;
+        boxGoodbye.style.zIndex = 3;
+    })
+    startHelpBox.addEventListener("click", function(){
+        windowMood.style.zIndex = 2;
+        windowAbout.style.zIndex = 2;
+        windowDocuments.style.zIndex = 2;
+        windowImages.style.zIndex = 2;
+        windowTrash.style.zIndex = 2;
+        windowEmails.style.zIndex = 2;
+        boxEmailAna.style.zIndex = 3;
+        boxGoodbye.style.zIndex = 2;
+    })
+   
 }
 
 
@@ -100,6 +141,7 @@ var trashX = document.querySelector(".trash .window-close")
 var documentsX = document.querySelector(".documents .window-close")
 var emailsX = document.querySelector(".emails .window-close")
 var helpX = document.querySelector(".help .window-close")
+var goodbyeX = document.querySelector(".goodbye .window-close")
 
 function exitAbout() {
     aboutX.addEventListener("click", function(){
@@ -137,6 +179,11 @@ function exitHelp() {
     })
 }
 
+function exitGoodbye() {
+    goodbyeX.addEventListener("click", function(){
+        boxGoodbye.style.display = "none";
+    })
+}
 
 
 function exitEmails() {
@@ -153,6 +200,7 @@ exitTrash()
 exitMood()
 exitEmails()
 exitHelp()
+exitGoodbye()
 
 // draggable windows
 
@@ -270,6 +318,7 @@ var startSettingsLogo = document.querySelector(".start-settings")
 var startRecentMenu = document.querySelector(".start-recent-menu")
 var startRecentLogo = document.querySelector(".start-recent")
 var startHelpBox = document.querySelector(".start-help")
+var startGoodbye = document.querySelector(".start-goodbye")
 
 function settingsClassToggle() {
     startSettingsMenu.classList.toggle("show-start");
@@ -316,6 +365,14 @@ function openHelpBox() {
 }
 
 openHelpBox();
+
+function openGoodbye() {
+    startGoodbye.addEventListener("click", function(){
+        boxGoodbye.style.display = "block";
+    })
+}
+
+openGoodbye();
 
 
 // open windows from minimized menu bar
@@ -430,6 +487,12 @@ function closeEmailAnaBox() {
 }
 letsEmailAna();
 closeEmailAnaBox();
+
+// Goodbye alert
+
+
+
+
 
 // bring active window to front
 

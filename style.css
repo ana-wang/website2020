@@ -30,7 +30,7 @@ header {
 }
 
 header .logo {
-    width:150px;
+    width:300px;
     padding:10px;
    display:flex;
    height:40px;
@@ -39,15 +39,15 @@ header .logo {
 }
 
 header .logo img {
-    width:40px;
+    width:140px;
     
 }
 
 header .logo p {
-    width: 100px;
-    font-size:24px;
-    font-weight:600;
-    text-transform:uppercase;
+    width: 200px;
+    font-size:60px;
+    line-height:0;
+    
 }
 
 header .logo:hover {
@@ -55,10 +55,14 @@ header .logo:hover {
 }
 
 header .footer {
-    min-width: 200px;
+    min-width: 300px;
     text-align:right;
     padding:10px;
     
+}
+
+header .footer img {
+    width:60px;
 }
 
 section.desktop {
@@ -112,8 +116,13 @@ text-align:center;
 
 }
 .folder:hover {
-    background-image:url(images/anawang_logo.svg);
-    background-size:cover;
+   /* background-image:url(images/anawang_logo.svg);
+    background-size:cover;*/
+    background-color: #A3E2BA;
+}
+
+.folder:hover .folder-tab {
+    background-color: #A3E2BA;
 }
 
 .windows {
@@ -167,8 +176,12 @@ div.about{
     height:420px;
     font-size:12px;
     text-align:center;
+    overflow:hidden;
 }
 
+div.about img {
+    width:220px;
+}
 div.about p.window-bar {
     font-size:16px;
 }
@@ -325,7 +338,7 @@ display:none;
 }
 
 .start-settings-menu {
-    bottom:85px;
+    bottom:120px;
 }
 
 .start-settings-menu div {
@@ -336,7 +349,7 @@ display:none;
 }
 
 .start-recent-menu {
-      bottom:120px;
+      bottom:155px;
  
 }
 
@@ -386,8 +399,41 @@ display:none;
     text-align:center;
 }
 
+.documents-box {
+    display:flex;
+    justify-content: space-between;
+}
+.documents-list {
+width:50%;
 
-.help {
+
+
+}
+.documents-list p {
+    border:1px solid #000000;
+    margin:2px;
+    font-size: 12px;
+    padding-left:3px;
+}
+
+.documents-preview {
+    border:1px solid #000000;
+    width:40%;
+    height: 280px;
+    background-image:url(images/anawang-default.gif);
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.documents-preview img {
+    width: 70%;
+
+
+}
+.help, .goodbye {
     position:absolute;
    top:30%;
    left:300px;
@@ -397,14 +443,20 @@ display:none;
 margin: 60px 300px;
 padding:40px 5px;
  background-color: rgba(255, 255, 255, 0.9);
- z-index:20;
- display:none;
+ z-index:2;
+
  box-shadow: 8px 10px rgba(0,0,0,0.3);
  border-top:30px solid #094932;
+ display:none;
 
 }
 
-.help span{
+.goodbye {
+    top:25%;
+    left:260px;
+}
+
+.help span, .goodbye span{
     border:1px solid #000000;
     padding:8px 20px;
     margin-top:0px;
@@ -412,7 +464,7 @@ padding:40px 5px;
     margin-left:6px;
 }
 
-.help span:hover {
+.help span:hover, .goodbye span:hover {
     cursor:pointer;
     background-color: #094932;
  

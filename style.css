@@ -176,13 +176,13 @@ div.about{
     height:420px;
     font-size:12px;
     text-align:center;
-    overflow:hidden;
+    
 }
 
 div.about img {
     width:220px;
 }
-div.about p.window-bar {
+div.about p.window-bar, div.about p.window-close {
     font-size:16px;
 }
 

@@ -598,3 +598,21 @@ emailsToFront()
 trashToFront()
 goodbyeToFront()
 helpToFront()
+
+//background start effect on hover
+
+var startImage = document.querySelector(".logo img")
+function bgStart() {
+    startImage.addEventListener("mouseover", function(){
+       
+        bodyBg.style.backgroundImage = 'url(images/start.svg';
+        bodyBg.style.backgroundSize = 'contain';
+        bodyBg.style.backgroundPosition = 'center';
+    })
+    startImage.addEventListener("mouseout", function(){
+        
+        bodyBg.style.backgroundImage = 'none';
+    })
+}
+
+bgStart()

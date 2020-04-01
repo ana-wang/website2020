@@ -13,6 +13,7 @@ body {
     overflow:hidden;
     font-size:16px;
     font-weight:300;
+    
 }
 
 h1 {
@@ -96,11 +97,16 @@ height: 95px;
 /*background-color:black; */
 margin-bottom:20px;
 text-align:center;
+
+
 }
 
 .desktop-icon p {
-    font-size:11px;
+    font-size:12px;
     text-transform:uppercase;
+    background-color: #FCF1FF;
+    padding:3px;
+    
 }
 .desktop-icon img {
     height:60px;

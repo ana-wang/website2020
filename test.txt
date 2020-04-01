@@ -1,9 +1,6 @@
 // 
 
 
-
-
-To do:
-  - remove draggable elements within each window
-  - projects page: style folders
-
+if (bg === '/background1.png') {
+    $('.test').css("background-image", "url(/background2.png)");
+ }

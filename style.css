@@ -436,7 +436,7 @@ padding:40px 5px;
 
 .mobile-content {
     padding:100px;
-    max-width:300px;
+    max-width:400px;
     text-align:center;
     margin:0px auto;
     font-size:11px;
@@ -447,6 +447,8 @@ padding:40px 5px;
 }
 .mobile-content img {
     max-width:300px;
+    padding:0px 5px;
+    text-align:center;
 }
 .mobile-content div {
     margin-top:30px;

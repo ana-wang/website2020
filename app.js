@@ -503,6 +503,8 @@ function aboutToFront(){windowAbout.addEventListener("mousedown", function(){
     windowMood.style.zIndex = "2";
     windowTrash.style.zIndex = "2";
     windowAbout.style.zIndex = "3";
+    boxGoodbye.style.zIndex = "2";
+    boxEmailAna.style.zIndex = "2";
   
 })
 }
@@ -514,6 +516,8 @@ function documentsToFront(){windowDocuments.addEventListener("mousedown", functi
     windowMood.style.zIndex = "2";
     windowTrash.style.zIndex = "2";
     windowAbout.style.zIndex = "2";
+    boxGoodbye.style.zIndex = "2";
+    boxEmailAna.style.zIndex = "2";
 })
 }
 
@@ -524,11 +528,20 @@ function imagesToFront(){windowImages.addEventListener("mousedown", function(){
     windowMood.style.zIndex = "2";
     windowTrash.style.zIndex = "2";
     windowAbout.style.zIndex = "2";
+    boxGoodbye.style.zIndex = "2";
+    boxEmailAna.style.zIndex = "2";
 })
 }
 
 function moodToFront(){windowMood.addEventListener("mousedown", function(){
+    windowImages.style.zIndex = "2";
+    windowDocuments.style.zIndex = "2";
+    windowEmails.style.zIndex = "2";
     windowMood.style.zIndex = "3";
+    windowTrash.style.zIndex = "2";
+    windowAbout.style.zIndex = "2";
+    boxGoodbye.style.zIndex = "2";
+    boxEmailAna.style.zIndex = "2";
 })
 }
 
@@ -539,6 +552,8 @@ function emailsToFront(){windowEmails.addEventListener("mousedown", function(){
     windowMood.style.zIndex = "2";
     windowTrash.style.zIndex = "2";
     windowAbout.style.zIndex = "2";
+    boxGoodbye.style.zIndex = "2";
+    boxEmailAna.style.zIndex = "2";
 })
 }
 function trashToFront(){windowTrash.addEventListener("mousedown", function(){
@@ -548,6 +563,30 @@ function trashToFront(){windowTrash.addEventListener("mousedown", function(){
     windowMood.style.zIndex = "2";
     windowTrash.style.zIndex = "3";
     windowAbout.style.zIndex = "2";
+    boxGoodbye.style.zIndex = "2";
+    boxEmailAna.style.zIndex = "2";
+})
+}
+function goodbyeToFront(){boxGoodbye.addEventListener("mousedown", function(){
+    windowImages.style.zIndex = "2";
+    windowDocuments.style.zIndex = "2";
+    windowEmails.style.zIndex = "2";
+    windowMood.style.zIndex = "2";
+    windowTrash.style.zIndex = "2";
+    windowAbout.style.zIndex = "2";
+    boxGoodbye.style.zIndex = "3";
+    boxEmailAna.style.zIndex = "2";
+})
+}
+function helpToFront(){boxEmailAna.addEventListener("mousedown", function(){
+    windowImages.style.zIndex = "2";
+    windowDocuments.style.zIndex = "2";
+    windowEmails.style.zIndex = "2";
+    windowMood.style.zIndex = "2";
+    windowTrash.style.zIndex = "2";
+    windowAbout.style.zIndex = "2";
+    boxGoodbye.style.zIndex = "2";
+    boxEmailAna.style.zIndex = "3";
 })
 }
 
@@ -557,3 +596,5 @@ imagesToFront()
 moodToFront()
 emailsToFront()
 trashToFront()
+goodbyeToFront()
+helpToFront()

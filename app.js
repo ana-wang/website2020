@@ -293,19 +293,35 @@ function dragStart(e) {
  
 
 function classToggle() {
-    startMenu.classList.toggle("show-start");
-    startMenu.classList.toggle("hide-start");
+    startMenu.classList.add("show-start");
+    startMenu.classList.remove("hide-start");
 
 }
 
+function removeToggle() {
+    startMenu.classList.remove("show-start");
+    startMenu.classList.add("hide-start");
+
+}
+
+
 function menuToggle() {
-    startLogo.addEventListener("click", function(){
+    startLogo.addEventListener("mouseenter", function(){
         classToggle()
         startSettingsMenu.classList.remove("show-start")
         startSettingsMenu.classList.add("hide-start")
         startRecentMenu.classList.remove("show-start");
         startRecentMenu.classList.add("hide-start");
     })
+
+    startMenu.addEventListener("mouseleave", function(){
+        removeToggle()
+        startSettingsMenu.classList.remove("show-start")
+        startSettingsMenu.classList.add("hide-start")
+        startRecentMenu.classList.remove("show-start");
+        startRecentMenu.classList.add("hide-start");
+    })
+
 
 }
 
@@ -321,14 +337,14 @@ var startHelpBox = document.querySelector(".start-help")
 var startGoodbye = document.querySelector(".start-goodbye")
 
 function settingsClassToggle() {
-    startSettingsMenu.classList.toggle("show-start");
-    startSettingsMenu.classList.toggle("hide-start");
+    startSettingsMenu.classList.add("show-start");
+    startSettingsMenu.classList.remove("hide-start");
     
   
 }
 
 function settingsMenuToggle() {
-    startSettingsLogo.addEventListener("click", function(){
+    startSettingsLogo.addEventListener("mouseenter", function(){
         settingsClassToggle();
         startRecentMenu.classList.remove("show-start");
         startRecentMenu.classList.add("hide-start");
@@ -340,14 +356,14 @@ function settingsMenuToggle() {
 settingsMenuToggle()
 
 function recentClassToggle() {
-    startRecentMenu.classList.toggle("show-start");
-    startRecentMenu.classList.toggle("hide-start");
+    startRecentMenu.classList.add("show-start");
+    startRecentMenu.classList.remove("hide-start");
   
 
 }
 
 function recentMenuToggle() {
-    startRecentLogo.addEventListener("click", function(){
+    startRecentLogo.addEventListener("mouseenter", function(){
         recentClassToggle();
         startSettingsMenu.classList.remove("show-start")
         startSettingsMenu.classList.add("hide-start")
@@ -357,6 +373,15 @@ function recentMenuToggle() {
 }
 
 recentMenuToggle()
+
+function recentMenuShow() {
+    startSettingsMenu.addEventListener("mouseenter", function(){
+        startMenu.classList.add("show-start")
+        startMenu.classList.remove("hide-start")
+    })
+}
+
+recentMenuShow()
 
 function openHelpBox() {
     startHelpBox.addEventListener("click", function(){

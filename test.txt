@@ -4,3 +4,64 @@
 if (bg === '/background1.png') {
     $('.test').css("background-image", "url(/background2.png)");
  }
+
+
+// THEME 2: BUTTERCUP - march 31, 2020
+
+
+
+ // this is the darker color 
+ var butterColor = "#D30C0C"
+ // this is the background color (lighter)
+ var butterColorAccent = "#F5DADF"
+ // this is the minimized window color
+ var butterColorHighlight = "#fff"
+ 
+ var menubutter = document.querySelector(".butter")
+ 
+ function butter() {
+     menubutter.addEventListener("mouseover", function(){
+             windowMood.classList.add("show-window");
+             windowMood.classList.remove("hide-window");
+             windowMood.style.zIndex = 3;
+             windowAbout.style.zIndex = 2;
+             windowDocuments.style.zIndex = 2;
+             windowImages.style.zIndex = 2;
+             windowTrash.style.zIndex = 2;
+             windowEmails.style.zIndex = 2;
+             boxEmailAna.style.zIndex = 2;
+             boxGoodbye.style.zIndex = 2;
+             windowMood.style.backgroundImage = "url(https://media2.giphy.com/media/rXTOGJlZBqH72/giphy.webp?cid=ecf05e47e860311d11104512ae52be07478f0325cee812a7&rid=giphy.webp)";
+             bodyBg.style.backgroundColor = butterColorAccent;
+           bodyBg.style.fontFamily = "helvetica";
+             header.style.backgroundColor = butterColor;
+             desktopIconDocumentsText.style.backgroundColor = butterColorAccent;
+             desktopIconPicturesText.style.backgroundColor = butterColorAccent;
+             desktopIconEmailsText.style.backgroundColor = butterColorAccent;
+             desktopIconDocuments.style.backgroundColor = butterColor;
+             desktopIconPictures.style.backgroundColor = butterColor;
+             desktopIconEmails.style.backgroundColor = butterColor;
+             desktopIconDocumentsTab.style.backgroundColor = butterColor;
+             desktopIconPicturesTab.style.backgroundColor = butterColor;
+             desktopIconEmailsTab.style.backgroundColor = butterColor;
+             desktopIconTrashText.style.backgroundColor = butterColorAccent;
+             startMenu.style.backgroundColor = butterColor;
+             startSettings.style.backgroundColor = butterColor; 
+             startRecent.style.backgroundColor = butterColor; 
+             windowAbout.style.borderTop = `30px solid ${butterColor}`; 
+             windowImages.style.borderTop = `30px solid ${butterColor}`; 
+             windowTrash.style.borderTop = `30px solid ${butterColor}`; 
+             windowMood.style.borderTop = `30px solid ${butterColor}`; 
+             windowDocuments.style.borderTop = `30px solid ${butterColor}`; 
+             windowEmails.style.borderTop = `30px solid ${butterColor}`; 
+             boxGoodbye.style.borderTop = `30px solid ${butterColor}`; 
+             boxEmailAna.style.borderTop = `30px solid ${butterColor}`; 
+ 
+             menuAbout.style.backgroundColor = butterColorHighlight;
+             menuDocuments.style.backgroundColor = butterColorHighlight;
+             menuImages .style.backgroundColor = butterColorHighlight;
+ 
+     })
+ }
+ 
+ butter()

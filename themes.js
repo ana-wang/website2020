@@ -59,7 +59,7 @@ function worldInBloom() {
             windowEmails.style.zIndex = 2;
             boxEmailAna.style.zIndex = 2;
             boxGoodbye.style.zIndex = 2;
-            windowMood.style.backgroundImage = "url(images/anawang-default.gif";
+            windowMood.style.backgroundImage = "url(images/anawang-default.gif)";
             bodyBg.style.backgroundColor = worldInBloomColorAccent;
           
             header.style.backgroundColor = worldInBloomColor;
@@ -95,4 +95,3 @@ function worldInBloom() {
 worldInBloom()
 
 
-// THEME 2: TBD? - march 31, 2020

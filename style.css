@@ -248,12 +248,19 @@ div.images{
    /*     top:150px;
         right:160px;
         width:500px;*/
-        width:900px;
-        height:70%;
+        width:800px;
+        height:auto;
         top:30px;
-        left:50px;
+        left:150px;
         
        
+    }
+
+    div.images a img {
+        width:100%;
+        margin: 0 auto;
+      
+        transform: none !important;  
     }
 
 div.trash{

@@ -641,3 +641,20 @@ function bgStart() {
 }
 
 bgStart()
+
+// background effect on images hover
+
+var igImages = document.querySelector(".images img")
+function igBg() {
+    igImages.addEventListener("mouseover", function(){
+        bodyBg.style.backgroundImage = 'url(images/ANA_ET_AL.svg';
+        bodyBg.style.backgroundSize = 'contain';
+        bodyBg.style.backgroundPosition = 'center';
+    })
+    igImages.addEventListener("mouseout", function(){
+        
+        bodyBg.style.backgroundImage = 'none';
+    })
+}
+
+igBg()

@@ -9,14 +9,15 @@ body {
     margin:0px;
 
     background-color: #FCF1FF;
-    font-family: Inter;
+    font-family: titling-gothic-fb-wide, sans-serif;
     overflow:hidden;
     font-size:16px;
-    font-weight:300;
+    font-weight:400;
     
 }
 
 h1 {
+    font-family:courier new;
     font-size:12px;
     font-weight:300;
 
@@ -89,6 +90,18 @@ padding:40px;
 
 }
 
+.hidden p {
+    font-family:inherit;
+}
+
+.about p {
+    font-family:courier new;
+}
+
+p.window-bar {
+
+        font-family: titling-gothic-fb-wide, sans-serif;
+    }
 .desktop .desktop-icon {
     display:flex;
     flex-direction:column;
@@ -102,7 +115,7 @@ text-align:center;
 }
 
 .desktop-icon p {
-    font-size:12px;
+    font-size:9px;
     text-transform:uppercase;
     background-color: #FCF1FF;
     padding:3px;
@@ -196,6 +209,7 @@ p.window-bar {
 
 
 
+
 p.window-close{
     position:absolute;
     top:-42px;
@@ -249,7 +263,7 @@ div.images{
         right:160px;
         width:500px;*/
         width:800px;
-        height:auto;
+        height:350px;
         top:30px;
         left:150px;
         
@@ -280,25 +294,26 @@ div.documents {
  
 }
 
-.documents-container {
+.emails-container {
     display:flex;
-   
-    width:100%;
+   justify-content:space-between;
+    width:auto;
 
 }
 
-.documents-container .emails-left {
-    width:30%;
+.emails-container .emails-left {
+    width: auto;
     display:flex;
     flex-direction:column;
 }
-.documents-container .emails-right {
- border:1px solid #000000;
- width:60%;
+.emails-container .emails-right {
+ 
+ width:80%;
 }
 
 .emails-left p {
     opacity: 0.3;
+    margin:3px;
 }
 
 .emails-left p.highlighted {
@@ -309,6 +324,13 @@ div.documents {
     border:1px solid #000000;
     margin:3px;
     padding:14px;
+    line-height:0.1;
+}
+
+.emails-right div:hover {
+    background-color: #FCF1FF;;
+    cursor:pointer;
+    border:1px solid #DFB2F3;
 }
 
 .date {
@@ -424,20 +446,22 @@ display:none;
     background-color: #094932;
 }
 
-.project-list {
+.pictures-list {
     display:flex;
     max-width: 100%;
     flex-wrap:wrap;
 }
 
-.single-project {
-    width:90px;
+.single-picture {
+    width:470px;
 }
-.single-project img {
-    width: 90px;
+.single-picture img {
+    width: 450px;
+    border: 1px #000000 solid;
+    margin:10px;
 }
 
-.single-project p{
+.single-picture p{
     text-align:center;
 }
 
@@ -480,7 +504,7 @@ width:50%;
    top:30%;
    left:300px;
     text-align:center;
-    width:300px;
+    width:400px;
     border:1px solid #000000;
 margin: 60px 300px;
 padding:40px 5px;
@@ -510,6 +534,14 @@ padding:40px 5px;
     cursor:pointer;
     background-color: #094932;
  
+}
+
+p.window-text {
+    font-family:courier new;
+}
+
+. help .window-bar p {
+    font-family: titling-gothic-fb-wide, sans-serif;
 }
 
 .window-close:hover {

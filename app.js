@@ -52,20 +52,20 @@ function showWindow() {
        
 
  //   })
-    iconImages.addEventListener("click", function(){
-        windowImages.classList.toggle("show-window");
-        windowImages.classList.toggle("hide-window");
-        windowMood.style.zIndex = 2;
-        windowAbout.style.zIndex = 2;
-        windowDocuments.style.zIndex = 2;
-        windowImages.style.zIndex = 3;
-        windowTrash.style.zIndex = 2;
-        windowEmails.style.zIndex = 2;
-        boxEmailAna.style.zIndex = 2;
-        boxGoodbye.style.zIndex = 2;
+ iconImages.addEventListener("click", function(){
+    windowImages.classList.toggle("show-window");
+    windowImages.classList.toggle("hide-window");
+   windowMood.style.zIndex = 2;
+      windowAbout.style.zIndex = 2;
+    windowDocuments.style.zIndex = 2;
+    windowImages.style.zIndex = 3;
+   windowTrash.style.zIndex = 2;
+     windowEmails.style.zIndex = 2;
+       boxEmailAna.style.zIndex = 2;
+      boxGoodbye.style.zIndex = 2;
       
 
-    })
+  })
     iconTrash.addEventListener("click", function(){
         windowTrash.classList.toggle("show-window");
         windowTrash.classList.toggle("hide-window");
@@ -630,7 +630,7 @@ var startImage = document.querySelector(".logo img")
 function bgStart() {
     startImage.addEventListener("mouseover", function(){
        
-        bodyBg.style.backgroundImage = 'url(images/start.svg';
+        bodyBg.style.backgroundImage = 'url(images/start.svg)';
         bodyBg.style.backgroundSize = 'contain';
         bodyBg.style.backgroundPosition = 'center';
     })
@@ -644,17 +644,25 @@ bgStart()
 
 // background effect on images hover
 
-var igImages = document.querySelector(".images img")
-function igBg() {
-    igImages.addEventListener("mouseover", function(){
-        bodyBg.style.backgroundImage = 'url(images/ANA_ET_AL.svg';
-        bodyBg.style.backgroundSize = 'contain';
-        bodyBg.style.backgroundPosition = 'center';
+
+
+
+// emails
+
+var emailsChanel = document.querySelector(".chanel")
+
+function chanelMood() {
+    emailsChanel.addEventListener("mouseover", function(){
+     windowMood.style.backgroundImage = 'url(https://cdn.substack.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fcfef5bb8-c435-4ace-bfc1-61b7c2f65952_599x800.jpeg)';
+     windowMood.style.backgroundSize = 'cover';
+  windowMood.style.backgroundPosition = 'center';
+  
     })
-    igImages.addEventListener("mouseout", function(){
+    emailsChanel.addEventListener("mouseout", function(){
         
-        bodyBg.style.backgroundImage = 'none';
+        windowMood.style.backgroundImage = '';
+        windowMood.innerHTML = '';
     })
 }
 
-igBg()
+chanelMood()

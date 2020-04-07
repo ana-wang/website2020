@@ -92,4 +92,5 @@ igBg()
         <p>I currently work on content at <a href="http://www.superhi.com" target="_blank">SuperHi</a>. </p>
         <p>More things to come!</p>  <p>----- </p>
         <p>Instagram: <a href="http://instagram.com/ana_et_al" target="_blank">@ana_et_al</a></p>
-      
+        <p>
+            After graduating with a fashion design degree in Vancouver, Ana worked in brand marketing, retail design and digital operations for bridal, lingerie and childrenswear, finding an accidental niche teaching and helping brands adapt to the digital revolution through social media and e-commerce. She followed that with a stint as a freelance copywriter and editor before making the leap to tech, first teaching thousands of entrepreneurs and eventually leading a team scaling social listening and incident response at Shopify. </p>

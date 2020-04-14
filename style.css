@@ -562,29 +562,31 @@ p.window-text {
 
 
 .mobile {
-   /* display:none; */
+   display:flex;
+   justify-content:center;
    width:100vw;
    height:100vh;
    background-image:url(images/anawang-default.gif);
    background-size:cover;
    text-align:center;
+   padding:0px;
   
 
 }
 
 .mobile-content {
-    padding:100px;
-    max-width:400px;
+ 
     text-align:center;
-    margin:0px auto;
-    font-size:11px;
+ width:80%;
+ padding-top:80px;
+    font-size:10px;
 }
 
 .mobile-content p {
     font-size:14px;
 }
 .mobile-content img {
-    max-width:300px;
+    max-width: 200px;
     padding:0px 5px;
     text-align:center;
 }
@@ -614,7 +616,7 @@ p.window-text {
     }
 
     .mobile {
-        display:block;
+        display:flex;
     }
 }
 

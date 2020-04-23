@@ -465,11 +465,20 @@ display:none;
     display:flex;
     justify-content:space-between;
     max-width: 100%;
-    height:500px;
+
     flex-wrap:wrap;
     padding:20px;
 }
 
+.instagram {
+    background-image:url(images/ana-wang.png);
+    background-size:cover;
+
+    border: 1px solid #094932;
+    margin-right: 2px;
+    transform:none !important; 
+
+}
 .single-picture {
     width:25%;
 }

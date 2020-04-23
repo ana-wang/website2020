@@ -105,11 +105,13 @@ p.window-bar {
 .desktop .desktop-icon {
     display:flex;
     flex-direction:column;
-width: 80px;
+width: 100px;
 height: 95px;
 /*background-color:black; */
 margin-bottom:20px;
 text-align:center;
+align-items: center;
+
 
 
 }
@@ -119,6 +121,7 @@ text-align:center;
     text-transform:uppercase;
     background-color: #FCF1FF;
     padding:3px;
+ 
     
 }
 .desktop-icon img {
@@ -132,7 +135,7 @@ text-align:center;
     position:absolute;
     width:30px;
     margin-top:-6px;
-    margin-left:50px;
+    margin-left:25px;
     height:6px;
     background-color:#094932;
 }
@@ -460,17 +463,20 @@ display:none;
 
 .pictures-list {
     display:flex;
+    justify-content:space-between;
     max-width: 100%;
+    height:500px;
     flex-wrap:wrap;
+    padding:20px;
 }
 
 .single-picture {
-    width:470px;
+    width:25%;
 }
 .single-picture img {
-    width: 450px;
+    width: 100%;
     border: 1px #000000 solid;
-    margin:10px;
+   margin:10px;
 }
 
 .single-picture p{
